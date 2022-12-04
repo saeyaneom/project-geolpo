@@ -56,14 +56,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<!-- <nav id="navi">
+					<a href="https://saeyaneom.github.io/portfolio/#projects-section" style="cursor: pointer; color: #3e64ff;" >Back to the lists</a>
+					<nav id="navi">
 						<ul>
-							<li><a href="../portfolio/#page-1">Education</a></li>
-							<li><a href="../portfolio/#page-2">Experience</a></li>
-							<li><a href="../portfolio/#page-3">Skills</a></li>
-							<li><a href="#page-4">Projects</a></li>
+							<li><a href="#description">Description</a></li>
+							<li><a href="#tools">Tools</a></li>
+							<li><a href="#data">Data</a></li>
+							<li><a href="#methodology">Methodology</a></li>
+							<li><a href="#results">Results</a></li>
 						</ul>
-					</nav> -->
+					</nav>
 					
 					<!-- <nav id="navi">
 						<ul>
@@ -74,7 +76,7 @@
 						</ul>
 					</nav> -->
 					
-					<a onclick="history.back()" style="cursor: pointer; color: #3e64ff;" >Back to the lists</a>
+					
 
 
 				</div>
@@ -82,109 +84,117 @@
 				<div class="col-md-9" id="project-section" style="margin-bottom: 20px">
 					<div id="page-4" class="page four">
 
-						<h1 class="title">Web-application <b>'Sale Check'</b></h1>
-						<div class="projectwrapper">
+						<h1 class="title">The New Town <b>“Geol-Po”</b></h1>
+						<div class="projectwrapper" id="description">
 							<h2 class="heading" style="margin-bottom: 10px;">Description</h2>
 							<div class="detail">
 								<h6>
-								Everyone wants to buy things at a low price during the sale. But the sale period is unpredictable. 
-								Also, even if there are regular sales, it is hard for people to remember all of them. Therefore, 
-								this project crawled past sales data and generated a time series prediction model using the data. The model provides sales
-								 forecasting data for the next year through applications, represents sales forecasting on the calendar, 
-								 and provides easy access to the official website.
+								This project aims to estimate the degree of regional decline using environmental, demographic and indeustrial economic parameters.
+								We integraed various regional statistics and selected the features that affect the regional decline through stepwise feature selection.
+								And we contructed K-means clustering models using features for each field to visualize the degree of regional decline.
+								Finally, we proposed public policies utilizing the analysis results to revive the area in decline.
 								</h6>
 							</div>
 						</div>
 
 						
 
-						<div class="projectwrapper">
+						<div class="projectwrapper" id ="tools">
 							<h2 class="heading" style="margin-bottom: 10px;">What we used...</h2>
 							<div class="detail">
 								<div class="imagewrapper">
-									<img src="images/react.js.png" style="height: 100px;" />
-									<img src="images/bs.png" style="height: 100px;" />
-									<img src="images/selenium.png" style="height: 100px;" />
+									<img src="images/python.png" style="height: 100px;" />
+									<img src="images/sklearn.png" style="height: 100px;" />
 								</div>
 								<h6>
-									We utilized <b>React.js</b> to implement screen, and <b>Beautiful Soup</b> and <b>Selenium</b>
-								for Data Crawling.
+									We utilized <b>python</b> within overall data analysis process, and used <b>scikit-learn</b> to
+									construct K-means cluster models.
 								</h6>
 							</div>
 						</div>
+
+						<div class="projectwrapper" id="data">
+							<h2 class="heading" style="margin-bottom: 10px;">Data</h2>
+							<div class="detail">
+								// sample <br />
+								We utilized data from Ministry of Land, Infrastructure and Transport, South Korea.
+								We used the data about activation degree by fields, and regional data. 
+							</div>
+						</div>
 						
-						<div class="projectwrapper">
+						<div class="projectwrapper" id="methodology">
 							<h2 class="heading" style="margin-bottom: 10px;">How?</h2>
 							<div>
-								<h3><b>Data Crawling</b></h3>
-								<div class="imagewrapper">
-									<img src="images/crawling1.png" style="height: 200px" />
-								</div>
+								<h3><b>Exploratory Data Analysis</b></h3>
 								<div class="detail" style="margin-bottom: 30px;">
-									<h4>
-										We crawled brands' data wheter they were on sale or not from Google News.
-									We collected data from 01.01.2017 to 10.01.2018.
-									</h4>
+									<h6>
+										We conducted Exploratory Data Analysis (EDA) and examined the relationship of each item.
+									</h6>
 								</div>
 
-								<h3><b>Time Series Prediction Models</b></h3>
+								<h3><b>Stepwise Feature Selection</b></h3>
 								<div class="detail">
+									<div class="imagewrapper">
+										<img src="images/feature selection.png" style="width:100%" />
+									</div>
 									<h6>
-										We utilized <b>Long Short-Term Memory (LSTM)</b>, <b>Seasonal Auto-Regressive Integrated Moving Average (SARIMA)</b>,
-									and <b>Prophet</b> module from facebook. We made models with one feature(whether the brand is sale or not) 
-									and compared the results. 
+										If we used all the variables, there is a risk of overfitting, so we selected the variables influential 
+										Dependent variable is whether the region is activated or not by fields, and the stepwise selection method is implemented by 
+										field to select variables that is significant to the degree of activation by field.
 									</h6>
 								</div>
-								<div><h6><b>LSTM</b></h6></div>
-								<div class="imagewrapper">
-									<h4>Ex. Kitty Bunny Pony (Brand)</h4>
-									<img src="images/LSTM-1.png" style="height: 200px;" />			
-								</div>
+
+								<h3><b>K-means clustering</b></h3>
 								<div class="detail">
-									<h6><b>LSTM</b> models used itself as trained data, so it understood the shape of ther pattern well.
-										But the further the future was predicted, the less accurate it was.
-									</h6>
-								</div>
-								<div><h6><b>SARIMA</b></h6></div>
-								<div class="imagewrapper">
-									<img src="images/SARIMA.png" style="height: 200px;" />					
-								</div>
-								<div class="detail">
-									<h6><b>SARIMA</b> is also fine predicting the near future, but it has poor understanding of patterns at the further future.
-									</h6>
-								</div>
-								<div><h6><b>Prophet</b></h6></div>
-								<div class="imagewrapper">
-									<img src="images/prophet.png" style="height: 200px;" />
-								</div>
-								<div class="detail">
+									<div class="imagewrapper">
+										<img src="images/scree.png" />
+									</div>
 									<h6>
-										Prophet propet derived a probability of close to 20% to 50%
-										 while LSTM or SARIMA gave a probability of close to 100% when it was likely to be on sale. 
-										And the possibility of sale is over 20% is relatively high in propeht. With that standard(20%), prophet model 
-										predicted sale status very well, also in the further future. </h6>
+										To find the optimal <b>k</b> for clustering, we made scree plots by fields.
+										And the plots said <b>3</b> is optimal.
+									</h6>
+
+									<div class="imagewrapper">
+										<img src="images/demographic.png" />
+										<img src="images/industrial.png" />
+										<img src="images/environmental.png" />
+									</div>
+									<div class="imagewrapper">
+										<img src="images/final_cluster.png" style="width:100%"/>
+									</div>
+									<h6>
+										And we visualized the clustering results and analyzed the structure with box plot.
+									</h6>
 								</div>
+				
+								
 							</div>
 						</div>
 
-						<div class="projectwrapper">
+						<div class="projectwrapper" id="results">
 							<h2 class="heading" style="margin-bottom: 10px;">Results</h2>
 							<div class="detail">
+								<div class="imagewrapper">
+									<img src="images/final_result.png" style="width:100%"/>
+								</div>
+								
 								<h6>
-									We checked the result with actual sale status in October and Novemeber 2022, 
-									prophet showed the most accurate prediction result. Additionally, compared to the brands data 
-									which have regular sales in fixed month, Prophet showed the fine result, too.
+									We visualized the result of <b>K-means clustering</b> on the Korea map. The activation levels are conposed by 3 levels.
+								</h6>
+
+								<div class="imagewrapper">
+									<img src="images/final_final_result.png" style="height:315px" />
+								</div>
+								
+								<h6>
+									These are the results of clustering in all three fields. Through these visualization, we could check
+									which regions needed urban regeneration projects the most.
 								</h6>
 							</div>
 							
 						</div>
 						
-						<div class="projectwrapper">
-							<h2 class="heading" style="margin-bottom: 10px;">Functions</h2>
-							<div class="video-wrap" style="margin: 10px 0 30px 0;">
-								<iframe id="video" width="70%" height="250px" src="https://www.youtube.com/embed/WCu0qrAKjl0" frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						</div>
+			
 
 						
 

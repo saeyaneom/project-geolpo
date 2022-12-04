@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -8526,7 +8526,7 @@ h4, .h4{
 }
 .detail{
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 h6, .h6{
