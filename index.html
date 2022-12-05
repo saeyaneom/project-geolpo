@@ -89,50 +89,69 @@
 							<h2 class="heading" style="margin-bottom: 10px;">Description</h2>
 							<div class="detail">
 								<h6>
-								This project aims to estimate the degree of regional decline using environmental, demographic and indeustrial economic parameters.
-								We integraed various regional statistics and selected the features that affect the regional decline through stepwise feature selection.
-								And we contructed K-means clustering models using features for each field to visualize the degree of regional decline.
-								Finally, we proposed public policies utilizing the analysis results to revive the area in decline.
+								We selected an undeveloped area of about 2 square km and analyzed the status of the area, the surrounding industrial development, population, and transportation.
+								Later, as a result of the analysis, we set a new town concept suitable for the region. 
+								Considering the region's characteristics, which were initially farmland, we set the design plans of Smart Farm facilities, 
+								residential areas for workers and previous residents and newcomers, and education and welfare facilities. 
+								In addition, we designed sufficient green areas for the nicety of residential areas, smart farms, and commercial areas, 
+								and pedestrian roads and bicycle paths were planned in connection with nearby waterfront parks. Based on the concept, 
+								we designed land use plans and district plans, and transportation systems. And we proposed a public policy proposal and new businesses plan for regional revival after a SWOT analysis of the new town. 
+								Finally, we implemented the buildings we designed through SketchUp and rendered them through Twinmotion.
 								</h6>
 							</div>
 						</div>
 
-						
-
-						<div class="projectwrapper" id ="tools">
-							<h2 class="heading" style="margin-bottom: 10px;">What we used...</h2>
+						<div class="projectwrapper" id="pannel">
+							<h2 class="heading" style="margin-bottom: 10px;">Plan</h2>
 							<div class="detail">
-								<div class="imagewrapper">
-									<img src="images/python.png" style="height: 100px;" />
-									<img src="images/sklearn.png" style="height: 100px;" />
+								<div class="imagewrapper" style="width: 50%">
+									<img src="images/pannel3.png" />
 								</div>
-								<h6>
-									We utilized <b>python</b> within overall data analysis process, and used <b>scikit-learn</b> to
-									construct K-means cluster models.
-								</h6>
 							</div>
 						</div>
-
+					
+					
 						<div class="projectwrapper" id="data">
-							<h2 class="heading" style="margin-bottom: 10px;">Data</h2>
+							<h2 class="heading" style="margin-bottom: 10px;">Spatial Analysis</h2>
+							<h3><b>Transportation</b></h3>
 							<div class="detail">
-								// sample <br />
-								We utilized data from Ministry of Land, Infrastructure and Transport, South Korea.
-								We used the data about activation degree by fields, and regional data. 
+								<div class="imagewrapper" style="width:100%">
+									<img src="images/transportation (1).png" />
+									<img src="images/transportation (2).png" />
+									<img src="images/transportation (3).png" />
+								</div>
+							</div>
+
+							<h3><b>Topography</b></h3>
+							<div class="detail">
+								<div class="imagewrapper" style="width:100%">
+									<img src="images/topography (1).png" />
+									<img src="images/topography (2).png" />
+									
+								</div>
 							</div>
 						</div>
 						
 						<div class="projectwrapper" id="methodology">
-							<h2 class="heading" style="margin-bottom: 10px;">How?</h2>
+							<h2 class="heading" style="margin-bottom: 10px;">Implementation</h2>
 							<div>
-								<h3><b>Exploratory Data Analysis</b></h3>
+								
 								<div class="detail" style="margin-bottom: 30px;">
-									<h6>
-										We conducted Exploratory Data Analysis (EDA) and examined the relationship of each item.
-									</h6>
+									<div class="imagewrapper" style="width:100%">
+										<img src="images/Image3.png" />
+										<img src="images/Image48.png" />
+										<img src="images/Image70.png" />
+									</div>
+								</div>
+								<div class="detail" style="margin-bottom: 30px;">
+									<div class="imagewrapper" style="width:100%">
+										<img src="images/Image19.png" />
+										<img src="images/Image27.png" />
+										<img src="images/Image3.png" />
+									</div>
 								</div>
 
-								<h3><b>Stepwise Feature Selection</b></h3>
+								
 								<div class="detail">
 									<div class="imagewrapper">
 										<img src="images/feature selection.png" style="width:100%" />
@@ -142,29 +161,7 @@
 										Dependent variable is whether the region is activated or not by fields, and the stepwise selection method is implemented by 
 										field to select variables that is significant to the degree of activation by field.
 									</h6>
-								</div>
-
-								<h3><b>K-means clustering</b></h3>
-								<div class="detail">
-									<div class="imagewrapper">
-										<img src="images/scree.png" />
-									</div>
-									<h6>
-										To find the optimal <b>k</b> for clustering, we made scree plots by fields.
-										And the plots said <b>3</b> is optimal.
-									</h6>
-
-									<div class="imagewrapper">
-										<img src="images/demographic.png" />
-										<img src="images/industrial.png" />
-										<img src="images/environmental.png" />
-									</div>
-									<div class="imagewrapper">
-										<img src="images/final_cluster.png" style="width:100%"/>
-									</div>
-									<h6>
-										And we visualized the clustering results and analyzed the structure with box plot.
-									</h6>
+				
 								</div>
 				
 								
